@@ -1,0 +1,245 @@
+.header {
+    position: sticky;
+    top: 0%;
+    z-index: 999;
+  }
+  
+  .header nav {
+    display: flex;
+    align-items: center;
+    background-color: rgb(239, 242, 244);
+    padding: 0.5rem;
+    justify-content: space-between;
+  }
+  
+  .left-header ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    font-size: 1.1em;
+    margin-left: 1rem;
+  }
+  
+  .left-header ul li:hover a {
+    color: #CAA35D;
+    font-weight: 600;
+  }
+  
+  .left-header ul li a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .nav-product i {
+    font-size: 1.4em;
+    cursor: pointer;
+  }
+  
+  .nav-product i:hover {
+    color: #CAA35D;
+    transition: 0.2s;
+  }
+  
+  /* Hover Underline Animation */
+  
+  .hover-underline-animation {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    color: black;
+    letter-spacing: 0.5px;
+  }
+  
+  .hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #CAA35D;
+    transform-origin: bottom right;
+    transition: transform 0.45s ease-out;
+  }
+  
+  .hover-underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  
+  /* Ending of this animation */
+  
+  .center-header {
+    font-family: 'Agbalumo';
+    font-size: 2em;
+    align-items: center;
+    display: flex;
+    color: #CAA35D;
+  }
+  
+  .center-header img {
+    width: 2.4rem;
+  }
+  .right-header form input {
+    height: 2.2rem;
+    padding-left: 0.5rem;
+    font-size: 1em;
+    outline: none;
+    border: 1px solid rgb(204, 213, 220);
+    transition: 0.5s;
+    border-radius: 5px;
+  }
+  
+  .right-header form input:focus {
+    border-color: #CAA35D;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+  }
+  .right-header form i:hover{
+    color: #CAA35D;
+  }
+  
+  .right-header form ::-webkit-input-placeholder {
+    color: rgb(160, 165, 168);
+  }
+  
+  .right-header form i {
+    position: relative;
+    left: -2rem;
+    cursor: pointer;
+  }
+  
+  .right-header {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    align-items: center;
+    margin-right: 2rem;
+  }
+  .nav-product i{
+    position: relative;
+    margin-right: 1rem;
+  }
+  
+ 
+  .cart-item-count {
+    position: absolute;
+    top: -14px;
+    right: -15px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+  
+  .right-header button {
+    width: 5rem;
+    height: 1.7rem;
+    border-radius: 5px;
+    border: 1px solid black;
+    font-size: 1em;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  
+  .right-header button:hover {
+    background-color: #CAA35D;
+    color: white;
+    border: 1 px solid #CAA35D;
+  }
+  .nav-product i{
+    margin-left: 1rem;
+  }
+  .nav-product li :hover {
+    color: #CAA35D;
+  }
+  
+  .nav-product {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .nav-product a{
+    color: black;
+  }
+
+  .each-right-nav{
+    display: flex;
+  }
+  .name-nav{
+    font-weight: 500;
+    display: none;
+  }
+  .nav-respo{
+    position: absolute;
+    float: right;
+    right: 2rem;
+    top: 1rem;
+  }
+  .nav-respo i{
+    font-size: 1.2em;
+    display: none;
+    cursor: pointer;
+  }
+  #close{
+    position: absolute;
+    float: right;
+    right: 0rem;
+  }
+  /* the max width in it is 1008px  */
+
+@media screen and (max-width:1008px) {
+  .left-header ul {
+      gap: 1rem;
+      font-size: 1em;
+  }
+  .center-header {
+      font-size: 1.6em;
+  }
+  .center-header img {
+    width: 2rem;
+}
+.right-header button {
+  width: 4.7rem;
+  height: 1.4rem;
+}
+.nav-product i {
+  margin-left: 0rem;
+}
+.right-header {
+  margin-right: 0rem;
+}
+}
+@media screen and (max-width:806px) {
+  .left-header{
+    display: none;
+  }
+}
+
+@media screen and (max-width:500px) {
+  #hamberger{
+    display: block;
+  }
+  .header nav {
+    flex-direction: column;
+  }
+  .nav-product{
+    flex-direction: column;
+  }
+  .right-header{
+    flex-direction: column;
+    align-items: baseline;
+   margin-top: -11.5rem;
+   margin-bottom: 2.9rem;
+    margin-right: 22rem;
+    transition: 0.5s;
+  }
+  .center-header{
+    margin-right: 18rem;
+    transition: 0.1s;
+  }
+  .name-nav{
+    display: block;
+  }
+}

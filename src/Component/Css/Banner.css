@@ -1,0 +1,89 @@
+.home-banner {
+    display: flex;
+    justify-content: space-around;
+    margin: 5rem 9rem;
+    align-items: center;
+    color: white;
+    background-color: #CAA35D;
+}
+
+.banner-left img {
+    width: 28rem;
+    margin-bottom: -4px;
+}
+
+.banner-right {
+    line-height: 2rem;
+    margin: 0rem 3rem;
+}
+
+.banner-right span {
+    font-size: 0.9em;
+}
+
+.banner-right button {
+    width: 10rem;
+    height: 1.6rem;
+    border-radius: 6px;
+    border: 1px solid white;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.banner-right button:hover {
+    box-shadow: 0px 0px 8px 1px white;
+}
+
+
+
+@media screen and (max-width:1130px) {
+    .home-banner {
+        margin: 5rem 5rem;
+    }
+}
+@media screen and (max-width:1002px) {
+    .home-banner {
+        margin: 5rem 5rem;
+    }
+    .banner-right {
+        line-height: 1.7rem;
+    }
+}
+@media screen and (max-width:996px) {
+    .banner-right span {
+        font-size: 14px;
+        letter-spacing: 0.2px;
+    }
+    .banner-right h1 {
+        font-size: 21px;
+    }
+    .banner-right p {
+        font-size: 15px;
+    }
+    .banner-right a {
+        font-size: 15px;
+    }
+}
+@media screen and (max-width:968px) {
+    .home-banner {
+        margin: 5rem 3rem;
+    }
+}
+@media screen and (max-width:903px) {
+    .home-banner {
+        margin: 5rem 3rem;
+        flex-direction: column;
+        width: 28rem;
+        margin: auto;
+        padding-bottom: 1rem;
+    }
+
+}
+@media screen and (max-width:550px) {
+    .banner-left img {
+        width: 20rem;
+    }
+    .home-banner {
+        width: 20rem;
+    }
+}

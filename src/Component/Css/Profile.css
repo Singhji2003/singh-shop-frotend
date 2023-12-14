@@ -1,0 +1,58 @@
+.personalDetailsHeading{
+    text-align: center;
+    margin-top: 1rem;
+    letter-spacing: 1px;
+}
+.profile-input-box{
+    width: 35rem;
+    height: 33rem;
+    left: 27rem;
+    margin: auto;
+    top: 5rem;
+    background-color: #d4b57c;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 2px #CAA35D;
+    position: absolute;
+}
+.profile-input-box i{
+    position: absolute;
+    right: 1rem;
+    top: 0.3rem;
+    font-size: 1.5em;
+    color: white;
+    cursor: pointer;
+
+}
+.profile-input-box .login-form form{
+    padding-top: 2rem;
+}
+.details-table table{
+    border: 1px solid black;
+    border-collapse: collapse;
+    height: 30vh;
+}
+.details-table table td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    font-size: 1.2em;
+    padding: 1rem;
+}
+.details-table{
+    margin: auto;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    width: 40rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.details-table button{
+    width: 8rem;
+    height: 2rem;
+    font-size: 1em;
+    right: 0;
+    margin-left: 32rem;
+    border-radius: 5px;
+    border: 1px solid black;
+    cursor: pointer;
+}

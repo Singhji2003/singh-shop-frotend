@@ -1,0 +1,12 @@
+/* the max width in it is 1008px  */
+
+@media screen and (max-width:1008px) {
+    .left-header ul {
+        gap: 1rem;
+        font-size: 1em;
+    }
+    .center-header {
+        font-size: 1.6em;
+    }
+    
+}

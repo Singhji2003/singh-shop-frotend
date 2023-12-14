@@ -1,0 +1,41 @@
+.about-heading{
+    margin: 4rem 2rem;
+    margin-bottom: 1rem;
+}
+.about-heading h1{
+    font-weight: 500;
+    text-shadow: 0 1px 4px rgba(0,0,0,.6);
+}
+.about-content p{
+    font-size: 1.2em;
+    width: 50rem;
+    margin:  0rem 2rem;
+    letter-spacing: 0.7px;
+    line-height: 1.6rem;
+}
+.about-content{
+    display: flex;
+    margin: 1rem 1rem;
+    gap: 2rem;
+}
+.about-content img{
+    width: 20em;
+}
+@media screen and (max-width:850px) {
+    .about-content p {
+        font-size: 1em;
+    }
+}
+@media screen and (max-width:726px) {
+    .about-content {
+        flex-direction: column-reverse;
+    }
+    .about-content p {
+        width: 85vw;
+        display: flex;
+        text-align: center;
+    }
+    .about-content img {
+        margin: auto;
+    }
+}

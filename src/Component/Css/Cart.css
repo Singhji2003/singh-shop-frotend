@@ -1,0 +1,131 @@
+.cart-products {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.cart-heading {
+    font-size: 1.1em;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    gap: 10px;
+}
+.cart-heading i{
+    font-size: 1.4em;
+}
+
+.cart-each-product {
+    margin: auto;
+    display: flex;
+    width: 70vw;
+    gap: 2rem;
+    align-items: center;
+}
+
+.cart-product-image img {
+    height: 10rem;
+}
+
+.cart-product-price-details {
+    display: flex;
+    color: green;
+    font-size: 1.2em;
+    gap: 0.5rem;
+}
+
+.cart-product-rating-details {
+    display: flex;
+    color: black;
+    font-size: 1.1em;
+    gap: 0.2rem;
+    align-items: center;
+}
+
+.cart-product-rating-details i {
+    color: yellow;
+}
+
+.original-price {
+    text-decoration: line-through;
+}
+
+.cart-product-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.cart-product-delete button {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px;
+    font-size: 1em;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    background-color: red;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 2px 10px red;
+}
+.cart-product-delete button:hover{
+    background-color: rgb(235, 15, 15);
+    transform: scale(1.03);   
+}
+
+.cart-payment {
+    margin: 0rem 4rem;
+
+}
+
+#cart:disabled {
+    cursor: not-allowed;
+}
+
+.goToHome {
+    width: 8rem;
+    font-size: 1.1em;
+    height: 2rem;
+}
+
+.cartEmpty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-direction: column;
+    margin: auto;
+}
+
+.cartEmpty h1 {
+    font-size: 1.3em;
+    margin-top: 3.8rem;
+}
+
+.cart-payment {
+    display: flex;
+    margin: auto;
+    margin-top: 2rem;
+    justify-content: center;
+}
+
+.cart-payment table tr td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 5rem;
+    padding: 1rem;
+}
+
+.cart-payment table {
+    width: 45rem;
+    border-collapse: collapse;
+    border: 1px solid black;
+}
