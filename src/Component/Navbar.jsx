@@ -14,6 +14,13 @@ const Navbar = (props) => {
     navigate('/login')
     props.showAlert("Successfully Logged Out", 'success')
   }
+
+  const closeNavbar = ()=>{
+    document.getElementById('nav-right').style.marginTop = '-14rem'
+    document.getElementById('nav-center').style.marginRight = '30vw'
+    document.getElementById('close').style.display = 'none'
+    document.getElementById('hamberger').style.display = 'block'
+  }
   const callFavourite = async()=>{
     try {
 
@@ -110,16 +117,31 @@ const Navbar = (props) => {
             <i className="fa-solid fa-magnifying-glass"></i>
           </form> */}
           <div className="nav-product">
-            <div className="each-right-nav">
-           <i className="fa-solid fa-cart-shopping" style={{color:currentUrl==='/cart'?'#CAA35D':'black'}} onClick={() => {
+            <div className="each-right-nav" id='respo-home' onClick={()=>{
+              if(window.innerWidth < 500){
+                closeNavbar();
+              }
+              navigate('/')
+            }}>
+           <i className="fa-solid fa-house" style={{color:currentUrl==='/home'?'#CAA35D':'black'}} >
+            </i> <div className="name-nav">Home</div>
+            </div>
+            <div className="each-right-nav" onClick={() => {
               !localStorage.getItem('authToken') ? navigate('/login') : navigate('/cart')
-            }}>{cartItemCount > 0 && <span className="cart-item-count">{cartItemCount}</span>}
+              if(window.innerWidth < 500){
+                closeNavbar();
+              }
+            }}>
+           <i className="fa-solid fa-cart-shopping" style={{color:currentUrl==='/cart'?'#CAA35D':'black'}} >{cartItemCount > 0 && <span className="cart-item-count">{cartItemCount}</span>}
             </i> <div className="name-nav">Cart</div>
             </div>
-            <div className="each-right-nav">
-            {currentUrl==='/favourite'?<i style={{color:'#CAA35D'}} className="fa-solid fa-heart" onClick={() => {
+            <div className="each-right-nav" onClick={() => {
               !localStorage.getItem('authToken') ? navigate('/login') : navigate('/favourite')
-            }}>{favouriteItemCount > 0 && <span className="cart-item-count">{favouriteItemCount}</span>}</i>:<i className="fa-regular fa-heart" onClick={() => {
+              if(window.innerWidth < 500){
+                closeNavbar();
+              }
+            }}>
+            {currentUrl==='/favourite'?<i style={{color:'#CAA35D'}} className="fa-solid fa-heart" >{favouriteItemCount > 0 && <span className="cart-item-count">{favouriteItemCount}</span>}</i>:<i className="fa-regular fa-heart" onClick={() => {
               !localStorage.getItem('authToken') ? navigate('/login') : navigate('/favourite')
             }}>{favouriteItemCount > 0 && <span className="cart-item-count">{favouriteItemCount}</span>}</i> }<div className="name-nav">Favourite</div>
             </div>
@@ -129,11 +151,20 @@ const Navbar = (props) => {
               <><Link to='/login'> <button>Login</button></Link>
                 <Link to='/signup'> <button>Sign Up</button></Link></> :
               <div className='nav-product'>
-            <div className="each-right-nav">
+            <div className="each-right-nav" onClick={()=>{
+               if(window.innerWidth < 500){
+                closeNavbar();
+              }
+            }}>
                 <Link to='/profile'> <i className="fa-solid fa-user" style={{color:currentUrl==='/profile'?'#CAA35D':'black'}}></i></Link>
                 <div className="name-nav">Profile</div>
                 </div>
-                <Link> <button onClick={logOut}>Log Out</button></Link>
+                <Link> <button onClick={()=>{
+                  logOut();
+                  if(window.innerWidth < 500){
+                    closeNavbar();
+                  }
+                }}>Log Out</button></Link>
               </div>
           }
           <div className="nav-respo">
@@ -144,10 +175,7 @@ const Navbar = (props) => {
             document.getElementById('hamberger').style.display = 'none'
           }}></i>
           <i className="fa-solid fa-xmark" id='close'  onClick={()=>{
-            document.getElementById('nav-right').style.marginTop = '-11.5rem'
-            document.getElementById('nav-center').style.marginRight = '18rem'
-            document.getElementById('close').style.display = 'none'
-            document.getElementById('hamberger').style.display = 'block'
+           closeNavbar();
           }}></i>
           </div>
         </div>

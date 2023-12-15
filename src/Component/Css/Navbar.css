@@ -1,7 +1,8 @@
 .header {
-    position: sticky;
-    top: 0%;
-    z-index: 999;
+  position: sticky;
+  top: 0%;
+  z-index: 999;
+  width: 100%;
   }
   
   .header nav {
@@ -216,9 +217,18 @@
     display: none;
   }
 }
+.respo-home{
+  display: none;
+}
 
 @media screen and (max-width:500px) {
+  .header{
+    position: absolute;
+  }
   #hamberger{
+    display: block;
+  }
+  .respo-home{
     display: block;
   }
   .header nav {
@@ -230,7 +240,7 @@
   .right-header{
     flex-direction: column;
     align-items: baseline;
-   margin-top: -11.5rem;
+   margin-top: -14rem;
    margin-bottom: 2.9rem;
     margin-right: 22rem;
     transition: 0.5s;
@@ -241,5 +251,13 @@
   }
   .name-nav{
     display: block;
+  }
+}
+@media screen and (max-width:466px) {
+  .center-header{
+    margin-right: 30vw;
+  }
+  .right-header{
+    margin-left: 5rem;
   }
 }

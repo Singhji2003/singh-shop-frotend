@@ -1,6 +1,6 @@
 .login-page{
     background-color: #CAA35D;
-    height: 90vh;
+    height: 99vh;
     width: 100vw;
     display: flex;
     align-items: center;
@@ -82,6 +82,19 @@
 
 
 
-@media screen and (max-width:806px) {
-    
+@media screen and (max-width:500px) {
+    .left-login-page img {
+        display: none;
+    }
+    .login-form {
+        margin-right: 4rem;
+        background-color: white;
+        padding: 2rem 3rem;
+        margin-top: 11rem;
+        z-index: 1;
+        margin-bottom: 7rem;
+    }
+    .input-field input {
+        width: 14rem;
+    }
 }
